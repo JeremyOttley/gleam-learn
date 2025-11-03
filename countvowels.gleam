@@ -8,8 +8,8 @@ pub fn main() -> Nil {
   let name: String = "Jeremy"
 
   string.split(name, "")
-  |> list.filter(fn(char) { list.contains(vowels, char) })
-  |> list.count(where: fn(s) { True })
+  // count all members that return True for this predicate function
+  |> list.count(where: fn(char) { list.contains(vowels, char) })
   |> int.to_string() //io.println expects a String
   |> io.println()
 }
