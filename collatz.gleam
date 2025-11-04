@@ -1,18 +1,6 @@
 import gleam/io
 import gleam/int
 
-fn greater_than_zero(n: Int) -> Bool {
-  todo
-}
-
-fn is_even(n: Int) -> Bool {
-  todo
-}
-
-fn is_odd(n: Int) -> Bool {
-  todo
-}
-
 fn collatz(n: Int) -> Int {
   case n {
     n if n > 0 && n % 2 == 0 -> n / 2
