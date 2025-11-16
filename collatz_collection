@@ -1,0 +1,18 @@
+import gleam/list
+
+fn collatz(of n: Int) -> Int {
+  case n {
+    n if n > 0 && n % 2 == 0 -> n / 2
+    n if n > 0 && n % 3 == 0 -> { n * 3 } + 1
+    _ -> n
+  }
+}
+
+pub fn main() -> List(Int) {
+  
+  let args = [1, 2, 3, 4, 5, 6]
+  
+  let result = list.map(args, fn(n) { collatz(of: n) })
+  
+  echo result
+}
